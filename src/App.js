@@ -196,7 +196,7 @@ class App extends Component {
             <ul className="result-container">
               {newList.map(eachValue => (
                 <li className="item-list" id={eachValue.id} key={eachValue.id}>
-                  <p className="initial ${eachValue.classAdd}">
+                  <p className={`initial ${eachValue.classAdd}`}>
                     {eachValue.initialValue}
                   </p>
                   <div className="list-content">
@@ -214,7 +214,7 @@ class App extends Component {
                   <button
                     type="button"
                     className="del-btn"
-                    onClick={() => this.deleteItem(eachValue.ids)}
+                    onClick={() => this.deleteItem(eachValue.id)}
                     data-testid="delete"
                   >
                     <img
